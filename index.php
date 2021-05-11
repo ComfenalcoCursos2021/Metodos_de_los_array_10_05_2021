@@ -1,9 +1,78 @@
 <?php
 
-    $lista = (array) [(string) 'Miguel',(string) 'Juan',(string) 'Jose',(string) 'Diana',  (array) ['Jaime', 'Lopez']];
+    header('Content-Type: aplication-json');
+
+    // echo '<a href="https://www.php.net/manual/es/function.array-splice.php" target="_black">Visitar Manual</a><br>';
+    $lista = (array) [
+            (string) 'Miguel',
+            (string) 'Juan', 
+            (string) 'Jose',
+            (string) 'Diana',
+            (array) ['Jaime', 'Lopezs']];
+
+    $devuelta = (array) array_splice(
+        array: $lista, 
+        offset: 1, 
+        length: 3,
+        replacement: ['Willian','Willian2','Willian3','Willian4']
+    );
+    print_r($lista);    
+    print_r($devuelta);
+
+
+    // Metodo slice elimina de la lista principal los datos que no deseamos ver y devuel un array nuevo
+    // echo '<a href="https://www.php.net/manual/es/function.array-slice" target="_black">Visitar Manual</a><br>';
+    // $lista = (array) [
+    //     (string) 'Miguel',
+    //     (string) 'Juan', 
+    //     (string) 'Jose',
+    //     (string) 'Diana',
+    //     (array) ['Jaime', 'Lopezs']];
+
+    // $devuelta = (array) array_slice(
+    //     array: (array) $lista, 
+    //     offset: (int) -5, 
+    //     length: (int) 4,
+    //     preserve_keys: (bool) true
+    // );
+
+    // print_r($lista);    
+    // print_r($devuelta);
+
+    // function saludar(
+    //     string $nombre,
+    //     string $apellido,
+    //     string $mensaje = 'Hola como estas'):string{
+    //     return "$mensaje $nombre $apellido";
+    // }
+    
+    // echo call_user_func('saludar', nombre: (string) 'Miguel Angel', mensaje: (string) 'Que tal', apellido: (string) 'Castro Escamilla');
+
+
+    // Metodo shift elimina el primer dato y lo devuelve
+    // echo '<a href="https://www.php.net/manual/es/function.array-shift.php" target="_black">Visitar Manual</a><br>';
+    // $lista = (array) [
+    //     (string) 'Miguel',
+    //     (string) 'Juan',
+    //     (string) 'Jose',
+    //     (string) 'Diana',
+    //     (array) ['Jaime', 'Lopez']];
+    // $devuelta = array_shift($lista);
+    // print_r($lista);
+    // print_r($devuelta);
+
+
+
+    // Metodo pop elimina el ultimo dato y lo devuelve
+    // echo '<a href="https://www.php.net/manual/es/function.array-pop.php" target="_black">Visitar Manual</a><br>';
+    // $lista = (array) [
+    //     (string) 'Miguel',
+    //     (string) 'Juan',
+    //     (string) 'Jose',
+    //     (string) 'Diana',
+    //     (array) ['Jaime', 'Lopez']];
     // $devuelta = array_pop($lista);
-    print_r($lista);
-    echo "<br>";
+    // print_r($lista);
     // print_r($devuelta);
 
 
@@ -17,7 +86,6 @@
     // $devuelta = (int) array_unshift($lista, ...$arg);
     // $devuelta = (int) array_unshift($lista, ...$arg2);
     // print_r($lista);
-    // echo "<br>";
     // print_r($devuelta);
 
 
@@ -28,7 +96,6 @@
     // $devuelta = (int) array_push($lista, ...$arg);
     // // $devuelta = (int) array_push($lista, (string) 'Miguel',(string) 'Juan'); 
     // print_r($lista);
-    // echo "<br>";
     // print_r($devuelta);
 
 
@@ -68,7 +135,6 @@
     //     (string) "Pepito"
     // ];
     // print_r($lista);
-    // echo "<br>";
     // $pocision = (int) count($lista)-2;
     // echo $lista[$pocision];
     
